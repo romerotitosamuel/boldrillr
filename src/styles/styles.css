@@ -1,96 +1,4 @@
 /* VARIABLES */
-/* NAVIGATION */
-* {
-  -webkit-box-sizing: border-box;
-          box-sizing: border-box;
-  margin: 0;
-  padding: 0;
-}
-
-body {
-  background-color: #D7DBDD;
-  max-width: 1280px;
-  margin: auto;
-}
-
-.page {
-  background-color: white;
-  font-family: 'Source Sans Pro', sans-serif;
-}
-
-/* NAVEGACION   minuto 16:00 */
-.container {
-  display: -webkit-box;
-  display: -ms-flexbox;
-  display: flex;
-  -ms-grid-columns: 100%;
-      grid-template-columns: 100%;
-  width: 100%;
-}
-
-.brand {
-  height: 70px;
-  margin-left: 50px;
-  margin-bottom: 20px;
-}
-
-.nav-main {
-  width: 100%;
-  max-width: 1280px;
-  margin: auto;
-  font-size: 15px;
-  display: -webkit-box;
-  display: -ms-flexbox;
-  display: flex;
-  -webkit-box-pack: justify;
-      -ms-flex-pack: justify;
-          justify-content: space-between;
-  -webkit-box-align: end;
-      -ms-flex-align: end;
-          align-items: flex-end;
-  background-color: #f15a29;
-  height: 100px;
-  margin-bottom: -1.5%;
-  z-index: 1;
-  position: relative;
-  -webkit-clip-path: polygon(0 0, 100% 0, 100% 100%, 51% 100%, 49% 90%, 0 90%);
-          clip-path: polygon(0 0, 100% 0, 100% 100%, 51% 100%, 49% 90%, 0 90%);
-}
-
-nav ul {
-  display: -webkit-box;
-  display: -ms-flexbox;
-  display: flex;
-  -webkit-box-align: end;
-      -ms-flex-align: end;
-          align-items: flex-end;
-}
-
-nav ul li {
-  list-style: none;
-  padding: 10px;
-  margin-bottom: 5px;
-}
-
-nav ul li a {
-  text-decoration: none;
-  color: white;
-  padding: 5px;
-  margin: 2px;
-}
-
-nav ul li a:hover {
-  background-color: rgba(0, 0, 0, 0.5);
-  border-radius: 5px;
-}
-
-@media (max-width: 700px) {
-  .nav-main {
-    -webkit-clip-path: polygon(0 0, 100% 0, 100% 100%, 51% 100%, 49% 95%, 0 95%);
-            clip-path: polygon(0 0, 100% 0, 100% 100%, 51% 100%, 49% 95%, 0 95%);
-  }
-}
-
 /* HOME */
 .presentation {
   margin-top: 5px;
@@ -259,4 +167,112 @@ footer {
 }
 
 /* EDITING SPACE FOR IMPORTS */
+/* NAVIGATION */
+* {
+  -webkit-box-sizing: border-box;
+          box-sizing: border-box;
+  margin: 0;
+  padding: 0;
+}
+
+body {
+  background-color: #D7DBDD;
+  max-width: 1280px;
+  margin: auto;
+}
+
+.page {
+  background-color: white;
+  font-family: 'Source Sans Pro', sans-serif;
+}
+
+/* NAVEGACION   minuto 16:00 */
+.menu-btn {
+  position: absolute;
+  cursor: pointer;
+  top: 25px;
+  right: 30px;
+  display: none;
+  color: white;
+}
+
+.container {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -ms-grid-columns: 100%;
+      grid-template-columns: 100%;
+  width: 100%;
+}
+
+.brand {
+  height: 70px;
+  margin-left: 50px;
+  margin-bottom: 20px;
+}
+
+.nav-main {
+  width: 100%;
+  max-width: 1280px;
+  margin: auto;
+  font-size: 15px;
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-pack: justify;
+      -ms-flex-pack: justify;
+          justify-content: space-between;
+  -webkit-box-align: end;
+      -ms-flex-align: end;
+          align-items: flex-end;
+  background-color: #f15a29;
+  margin-bottom: -1.5%;
+  z-index: 1;
+  position: relative;
+  -webkit-clip-path: polygon(0 0, 100% 0, 100% 100%, 51% 100%, 49% 90%, 0 90%);
+          clip-path: polygon(0 0, 100% 0, 100% 100%, 51% 100%, 49% 90%, 0 90%);
+}
+
+nav ul {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-align: end;
+      -ms-flex-align: end;
+          align-items: flex-end;
+}
+
+nav ul li {
+  list-style: none;
+  padding: 10px;
+  margin-bottom: 5px;
+}
+
+nav ul li a {
+  text-decoration: none;
+  color: white;
+  padding: 5px;
+  margin: 2px;
+}
+
+nav ul li a:hover {
+  background-color: rgba(0, 0, 0, 0.5);
+  border-radius: 5px;
+}
+
+@media (max-width: 700px) {
+  .nav-main {
+    -webkit-clip-path: polygon(0 0, 100% 0, 100% 100%, 51% 100%, 49% 95%, 0 95%);
+            clip-path: polygon(0 0, 100% 0, 100% 100%, 51% 100%, 49% 95%, 0 95%);
+  }
+  nav ul {
+    display: block;
+    background-color: #606f71;
+    position: absolute;
+    z-index: 5;
+  }
+  .menu-btn {
+    display: block;
+  }
+}
 /*# sourceMappingURL=styles.css.map */

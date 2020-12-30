@@ -1,4 +1,4 @@
-import React from 'react'
+import React, {useState}from 'react'
 import Home from './components/Home'
 import Contact from './components/Contact'
 import './styles/styles.css'
@@ -15,15 +15,33 @@ import {
 
 
 
+
+
+
 function App() {
+
+  const [color, setColor] = useState({color: "red"})
+
+  
+
   return (
     <Router>
       <div className="container">
-        <nav className="nav-main">
+        
+        <nav className="nav-main" >
+          <div className="menu-btn"  >
+            <i className="fa fa-bars fa-2x"></i>
+          </div>
             <img src={logoBlanco} alt="Logo Empresarial" className="brand"/>
-            <ul>
+            <ul className="nav-menu">
                 <li>
                   <Link to="/">Inicio</Link>
+                </li>
+                <li>
+                  <Link to="/contact">Contacto</Link>
+                </li>
+                <li>
+                  <Link to="/contact">Contacto</Link>
                 </li>
                 <li>
                   <Link to="/contact">Contacto</Link>
