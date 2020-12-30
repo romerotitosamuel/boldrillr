@@ -1,0 +1,31 @@
+/* HOME */
+
+
+.presentation {
+    margin-top: 5px;
+    padding: 20px;
+}
+.center-columns {
+    display: grid;
+    grid-template-columns: 2fr 1fr 1fr 1fr;
+    max-width: 1024px;
+    margin: auto;
+}
+.pilares {
+    padding: 20px;
+    max-width: 300px;
+    margin: auto;
+    margin-top: 5px;
+    h2{
+        text-align: center;
+    }
+    p {
+        color: #606f71 ;
+    }
+}
+
+@media (max-width: 700px){
+    .center-columns {
+        grid-template-columns: 1fr;
+    }
+}
