@@ -1,6 +1,4 @@
 /* HOME */
-
-
 .presentation {
     margin-top: 5px;
     padding: 20px;
@@ -10,12 +8,18 @@
     grid-template-columns: 2fr 1fr 1fr 1fr;
     max-width: 1024px;
     margin: auto;
+    margin-bottom: 10px;
 }
 .pilares {
     padding: 20px;
     max-width: 300px;
-    margin: auto;
+    margin-left: 10px;
     margin-top: 5px;
+   
+    clip-path: polygon(0 0, 47% 0, 53% 3%, 100% 3%, 100% 100%, 0 100%);
+    background-color: rgba($secondaryColor , 0.2);
+    border-radius: 10px;
+
     h2{
         text-align: center;
     }
@@ -23,9 +27,21 @@
         color: #606f71 ;
     }
 }
+.pilares:hover{
+    background-color: $primaryColor;
+    color: white;
+    transition: 0.3s ease-in-out;
+    p{
+        color: white;
+    }
+}
 
 @media (max-width: 700px){
     .center-columns {
         grid-template-columns: 1fr;
+    }
+    .pilares{
+        margin: auto;
+        margin-bottom: 10px;
     }
 }

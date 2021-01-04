@@ -1,4 +1,164 @@
 /* VARIABLES */
+/* NAVIGATION */
+* {
+  -webkit-box-sizing: border-box;
+          box-sizing: border-box;
+  margin: 0;
+  padding: 0;
+}
+
+body {
+  background-color: #D7DBDD;
+  max-width: 1280px;
+  margin: auto;
+}
+
+.page {
+  background-color: white;
+  font-family: 'Source Sans Pro', sans-serif;
+}
+
+/* NAVEGACION   minuto 16:00 */
+.menu-btn {
+  position: absolute;
+  cursor: pointer;
+  top: 25px;
+  right: 30px;
+  display: none;
+  color: white;
+}
+
+.container {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -ms-grid-columns: 100%;
+      grid-template-columns: 100%;
+  width: 100%;
+}
+
+.brand {
+  height: 70px;
+  margin: 10px 0 20px 50px;
+}
+
+.nav-main {
+  width: 100%;
+  max-width: 1280px;
+  margin: auto;
+  font-size: 15px;
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-pack: justify;
+      -ms-flex-pack: justify;
+          justify-content: space-between;
+  -webkit-box-align: end;
+      -ms-flex-align: end;
+          align-items: flex-end;
+  background-color: #f15a29;
+  margin-bottom: -1.5%;
+  z-index: 1;
+  position: relative;
+  -webkit-clip-path: polygon(0 0, 100% 0, 100% 100%, 51% 100%, 49% 90%, 0 90%);
+          clip-path: polygon(0 0, 100% 0, 100% 100%, 51% 100%, 49% 90%, 0 90%);
+}
+
+.nav-menu {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-align: end;
+      -ms-flex-align: end;
+          align-items: flex-end;
+}
+
+.nav-menu li {
+  list-style: none;
+  padding: 10px;
+  margin-bottom: 5px;
+}
+
+.nav-menu li a {
+  text-decoration: none;
+  color: white;
+  padding: 5px;
+  margin: 2px;
+}
+
+.nav-menu li a:hover {
+  background-color: rgba(0, 0, 0, 0.5);
+  border-radius: 5px;
+}
+
+.container .brand-hide {
+  display: none;
+}
+
+/*     RESPONSIVE DESIGN */
+@media (max-width: 700px) {
+  .brand {
+    height: 60px;
+    margin-left: 0px;
+    margin-bottom: 0px;
+    padding: 2px;
+  }
+  .nav-main {
+    -webkit-clip-path: none;
+            clip-path: none;
+    position: absolute;
+    display: block;
+    width: auto;
+    border-radius: 0 0 10px 0;
+    -webkit-transition: -webkit-transform .5s ease-in-out;
+    transition: -webkit-transform .5s ease-in-out;
+    transition: transform .5s ease-in-out;
+    transition: transform .5s ease-in-out, -webkit-transform .5s ease-in-out;
+  }
+  .nav-menu {
+    display: block;
+    margin: 50px;
+  }
+  .nav-menu li {
+    list-style: none;
+    padding: 10px;
+    margin-bottom: 5px;
+  }
+  .nav-menu li a {
+    text-decoration: none;
+    color: white;
+    padding: 5px;
+    margin: 2px;
+  }
+  .nav-menu li a:hover {
+    background-color: rgba(0, 0, 0, 0.5);
+    border-radius: 5px;
+  }
+  .menu-btn {
+    display: block;
+    position: absolute;
+    right: 5;
+    z-index: 3;
+    background-color: #f15a29;
+    padding: 5px;
+    border-radius: 8px;
+  }
+  .container .brand-hide {
+    display: block;
+    height: 60px;
+    position: absolute;
+    top: 5px;
+    left: 5px;
+    z-index: 1;
+    border-radius: 10px;
+  }
+  .nav-aux {
+    background-color: #f15a29;
+    width: 100%;
+    height: 80px;
+  }
+}
+
 /* HOME */
 .presentation {
   margin-top: 5px;
@@ -12,13 +172,18 @@
       grid-template-columns: 2fr 1fr 1fr 1fr;
   max-width: 1024px;
   margin: auto;
+  margin-bottom: 10px;
 }
 
 .pilares {
   padding: 20px;
   max-width: 300px;
-  margin: auto;
+  margin-left: 10px;
   margin-top: 5px;
+  -webkit-clip-path: polygon(0 0, 47% 0, 53% 3%, 100% 3%, 100% 100%, 0 100%);
+          clip-path: polygon(0 0, 47% 0, 53% 3%, 100% 3%, 100% 100%, 0 100%);
+  background-color: rgba(96, 111, 113, 0.2);
+  border-radius: 10px;
 }
 
 .pilares h2 {
@@ -29,10 +194,25 @@
   color: #606f71;
 }
 
+.pilares:hover {
+  background-color: #f15a29;
+  color: white;
+  -webkit-transition: 0.3s ease-in-out;
+  transition: 0.3s ease-in-out;
+}
+
+.pilares:hover p {
+  color: white;
+}
+
 @media (max-width: 700px) {
   .center-columns {
     -ms-grid-columns: 1fr;
         grid-template-columns: 1fr;
+  }
+  .pilares {
+    margin: auto;
+    margin-bottom: 10px;
   }
 }
 
@@ -90,6 +270,100 @@
   }
 }
 
+/* CONtact */
+.title-intro {
+  margin: 25px 15px 25px 15px;
+}
+
+.form-content {
+  color: #1b1919;
+  background-color: #ffffff;
+  max-width: 1280px;
+  margin: auto;
+  padding: 5px;
+}
+
+.contact-wrapper {
+  margin: 15px;
+  display: -ms-grid;
+  display: grid;
+  -ms-grid-columns: 2fr 1fr;
+      grid-template-columns: 2fr 1fr;
+  -webkit-box-shadow: 0 0 5px 0 rgba(0, 0, 0, 0.3);
+          box-shadow: 0 0 5px 0 rgba(0, 0, 0, 0.3);
+  border-radius: 15px;
+}
+
+.contact-form {
+  margin: auto;
+  width: 60%;
+  padding: 20px;
+}
+
+.contact-form h3 {
+  margin: 15px 0 25px 0;
+}
+
+.contact-form form button,
+.contact-form form input,
+.contact-form form textarea {
+  width: 100%;
+  margin: 10px 0 10px 0;
+  padding: 5px;
+  border: none;
+  border-bottom: 1px solid  #f15a29;
+  outline: none;
+}
+
+.contact-form form button {
+  background-color: #f15a29;
+  border-radius: 10px;
+  border: none;
+  text-transform: uppercase;
+  color: white;
+  padding: 1em;
+}
+
+.contact-form form button:hover {
+  background-color: #606f71;
+}
+
+.contact-info {
+  background-color: black;
+  padding: 15px;
+  color: white;
+  border-radius: 0 15px 15px 0;
+  -webkit-box-shadow: 0 0 5px 0 rgba(0, 0, 0, 0.3);
+          box-shadow: 0 0 5px 0 rgba(0, 0, 0, 0.3);
+  text-align: center;
+  padding-top: 40%;
+}
+
+.contact-info ul {
+  list-style: none;
+  padding: 1px;
+  -webkit-text-size-adjust: 70%;
+     -moz-text-size-adjust: 70%;
+      -ms-text-size-adjust: 70%;
+          text-size-adjust: 70%;
+}
+
+@media (max-width: 700px) {
+  .contact-wrapper {
+    -ms-grid-columns: 1fr;
+        grid-template-columns: 1fr;
+  }
+  .contact-info {
+    border-radius: 0 0 15px 15px;
+    -webkit-box-shadow: 0 0 5px 0 rgba(0, 0, 0, 0.3);
+            box-shadow: 0 0 5px 0 rgba(0, 0, 0, 0.3);
+    padding-top: 5px;
+  }
+  .contact-form {
+    width: 90%;
+  }
+}
+
 /* FOOTER */
 footer {
   padding-top: 5px;
@@ -135,7 +409,7 @@ footer {
       -ms-flex-pack: center;
           justify-content: center;
   padding: 5px;
-  font-size: 75%;
+  font-size: 100%;
 }
 
 .col3 {
@@ -167,112 +441,4 @@ footer {
 }
 
 /* EDITING SPACE FOR IMPORTS */
-/* NAVIGATION */
-* {
-  -webkit-box-sizing: border-box;
-          box-sizing: border-box;
-  margin: 0;
-  padding: 0;
-}
-
-body {
-  background-color: #D7DBDD;
-  max-width: 1280px;
-  margin: auto;
-}
-
-.page {
-  background-color: white;
-  font-family: 'Source Sans Pro', sans-serif;
-}
-
-/* NAVEGACION   minuto 16:00 */
-.menu-btn {
-  position: absolute;
-  cursor: pointer;
-  top: 25px;
-  right: 30px;
-  display: none;
-  color: white;
-}
-
-.container {
-  display: -webkit-box;
-  display: -ms-flexbox;
-  display: flex;
-  -ms-grid-columns: 100%;
-      grid-template-columns: 100%;
-  width: 100%;
-}
-
-.brand {
-  height: 70px;
-  margin-left: 50px;
-  margin-bottom: 20px;
-}
-
-.nav-main {
-  width: 100%;
-  max-width: 1280px;
-  margin: auto;
-  font-size: 15px;
-  display: -webkit-box;
-  display: -ms-flexbox;
-  display: flex;
-  -webkit-box-pack: justify;
-      -ms-flex-pack: justify;
-          justify-content: space-between;
-  -webkit-box-align: end;
-      -ms-flex-align: end;
-          align-items: flex-end;
-  background-color: #f15a29;
-  margin-bottom: -1.5%;
-  z-index: 1;
-  position: relative;
-  -webkit-clip-path: polygon(0 0, 100% 0, 100% 100%, 51% 100%, 49% 90%, 0 90%);
-          clip-path: polygon(0 0, 100% 0, 100% 100%, 51% 100%, 49% 90%, 0 90%);
-}
-
-nav ul {
-  display: -webkit-box;
-  display: -ms-flexbox;
-  display: flex;
-  -webkit-box-align: end;
-      -ms-flex-align: end;
-          align-items: flex-end;
-}
-
-nav ul li {
-  list-style: none;
-  padding: 10px;
-  margin-bottom: 5px;
-}
-
-nav ul li a {
-  text-decoration: none;
-  color: white;
-  padding: 5px;
-  margin: 2px;
-}
-
-nav ul li a:hover {
-  background-color: rgba(0, 0, 0, 0.5);
-  border-radius: 5px;
-}
-
-@media (max-width: 700px) {
-  .nav-main {
-    -webkit-clip-path: polygon(0 0, 100% 0, 100% 100%, 51% 100%, 49% 95%, 0 95%);
-            clip-path: polygon(0 0, 100% 0, 100% 100%, 51% 100%, 49% 95%, 0 95%);
-  }
-  nav ul {
-    display: block;
-    background-color: #606f71;
-    position: absolute;
-    z-index: 5;
-  }
-  .menu-btn {
-    display: block;
-  }
-}
 /*# sourceMappingURL=styles.css.map */

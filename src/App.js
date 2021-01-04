@@ -14,26 +14,34 @@ import {
 } from "react-router-dom";
 
 
-
-
-
-
 function App() {
-
-  const [color, setColor] = useState({color: "red"})
-
+  const linkShow = {transform: 'translate(0px)'};
+  const linkHide = {transform: 'translate(-300px, 0px)'}
+  let ini // Initial resolution from device
+  const resInit = () => {
+    if (window.screen.width>700){return ini = true}else{return ini = false}
+  }
+  resInit()
+  const [showindex, setShowindex] = useState(ini)
+  
+  const showMenu = () => {
+    setShowindex(!showindex)   
+  }
   
 
-  return (
-    <Router>
-      <div className="container">
-        
-        <nav className="nav-main" >
-          <div className="menu-btn"  >
+  return ( <div>
+        <div className="menu-btn" onClick={showMenu} >
             <i className="fa fa-bars fa-2x"></i>
           </div>
+    <Router>
+      <div className="container">
+        <div className="nav-aux">
+          <img src={logoBlanco} alt="Logo Empresarial" className="brand-hide"/>
+        </div>
+        <nav className="nav-main" style={showindex? linkShow : linkHide} >
             <img src={logoBlanco} alt="Logo Empresarial" className="brand"/>
-            <ul className="nav-menu">
+            
+            <ul className="nav-menu" >
                 <li>
                   <Link to="/">Inicio</Link>
                 </li>
@@ -60,6 +68,7 @@ function App() {
         </Route>
       </Switch>
     </Router>
+  </div>
   );
 }
 
