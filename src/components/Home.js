@@ -1,9 +1,10 @@
-import React from 'react'
+import React, {Fragment} from 'react'
 import Slideshow from './Slideshow'
 import Footer from './Footer'
 
 const Home = () => {
-    return (<div>
+    return (<Fragment>
+
         <Slideshow/>
         <div className="center-columns">
             <div className="presentation">
@@ -23,6 +24,7 @@ const Home = () => {
             </div>
         </div>
         <Footer/>
-    </div>)
+    </Fragment>
+    )
 }
 export default Home

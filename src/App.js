@@ -30,14 +30,31 @@ function App() {
   
 
   return ( <div>
-        <div className="menu-btn" onClick={showMenu} >
-            <i className="fa fa-bars fa-2x"></i>
-          </div>
+    <div className="menu-btn" onClick={showMenu} >
+      <i className="fa fa-bars fa-2x"></i>
+    </div>
+    <div className="nav-resp">
+      <Router>
+        <ul >
+            <li>
+              <Link to="/">Inicio</Link>
+            </li>
+            <li>
+              <Link to="/contact">Contacto</Link>
+            </li>
+            <li>
+              <Link to="/contact">Contacto</Link>
+            </li>
+            <li>
+              <Link to="/contact">Contacto</Link>
+            </li>
+            
+        </ul>
+      </Router>
+    </div>
     <Router>
       <div className="container">
-        <div className="nav-aux">
-          <img src={logoBlanco} alt="Logo Empresarial" className="brand-hide"/>
-        </div>
+        
         <nav className="nav-main" style={showindex? linkShow : linkHide} >
             <img src={logoBlanco} alt="Logo Empresarial" className="brand"/>
             
