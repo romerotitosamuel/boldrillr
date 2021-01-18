@@ -15,50 +15,35 @@ import {
 
 
 function App() {
-  const linkShow = {transform: 'translate(0px)'};
-  const linkHide = {transform: 'translate(-300px, 0px)'}
+  /*const linkShow = {transform: 'translate(0px)'};
+  const linkHide = {transform: 'translate(-300px, 0px)'}*/
+  const linkShow = { display: ''};
+  const linkHide = { display: 'none'}
   let ini // Initial resolution from device
   const resInit = () => {
     if (window.screen.width>700){return ini = true}else{return ini = false}
   }
-  resInit()
+  resInit() 
+
   const [showindex, setShowindex] = useState(ini)
   
   const showMenu = () => {
     setShowindex(!showindex)   
-  }
+  } 
   
 
   return ( <div>
     <div className="menu-btn" onClick={showMenu} >
       <i className="fa fa-bars fa-2x"></i>
     </div>
-    <div className="nav-resp">
-      <Router>
-        <ul >
-            <li>
-              <Link to="/">Inicio</Link>
-            </li>
-            <li>
-              <Link to="/contact">Contacto</Link>
-            </li>
-            <li>
-              <Link to="/contact">Contacto</Link>
-            </li>
-            <li>
-              <Link to="/contact">Contacto</Link>
-            </li>
-            
-        </ul>
-      </Router>
-    </div>
+
     <Router>
       <div className="container">
         
-        <nav className="nav-main" style={showindex? linkShow : linkHide} >
+        <nav className="nav-main"   >
             <img src={logoBlanco} alt="Logo Empresarial" className="brand"/>
             
-            <ul className="nav-menu" >
+            <ul className="nav-menu" style={showindex? linkShow : linkHide} >
                 <li>
                   <Link to="/">Inicio</Link>
                 </li>
