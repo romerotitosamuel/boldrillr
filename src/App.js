@@ -1,7 +1,7 @@
 import React, {useState}from 'react'
 import Home from './components/Home'
 import Contact from './components/Contact'
-import './styles/styles.css'
+import './styles/styles.scss'
 
 
 import logoBlanco from './img/logoBoldrillBlanco.png'
